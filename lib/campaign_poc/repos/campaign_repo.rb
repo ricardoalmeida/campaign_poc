@@ -1,6 +1,8 @@
 module CampaignPoc
   module Repos
     class CampaignRepo < ROM::Repository[:campaigns]
+      include Import["container"]
+
       commands :create,
         use: :timestamps,
         plugins_options: {

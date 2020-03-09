@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.7.0'
 
 gem 'dry-system'
+gem 'dry-auto_inject'
 gem 'rom'
 gem 'rom-sql'
 gem 'pg'

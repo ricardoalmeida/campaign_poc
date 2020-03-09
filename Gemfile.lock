@@ -81,6 +81,7 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
+  dry-auto_inject
   dry-system
   pg
   rake
