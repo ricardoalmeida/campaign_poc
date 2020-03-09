@@ -4,8 +4,9 @@ module CampaignPoc
 
       def self.call
         campaign_repo = CampaignPoc::Repos::CampaignRepo.new
-        campaigns = campaign_repo.all
-        campaigns.map do |campaign|
+        remotes = ["1"]
+        campaigns = campaign_repo.query(external_reference: remotes)
+        campaigns.to_a.map do |campaign|
           {
             "remote_reference": campaign.external_reference,
             "discrepancies": [

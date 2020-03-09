@@ -7,12 +7,17 @@ RSpec.describe CampaignPoc::Services::DetectDiscrepancies do
     repo.create(
       ad_description: "Ruby on Rails Developer",
       status: "active",
-      external_reference: 1
+      external_reference: "1"
+    )
+    repo.create(
+      ad_description: "Golang Developer",
+      status: "active",
+      external_reference: "2"
     )
   end
 
   describe ".call" do
-    it "list campaigns" do
+    it "returns discrepancies for remotes" do
       expect(subject.call).to match([
         {
           "remote_reference": "1",
