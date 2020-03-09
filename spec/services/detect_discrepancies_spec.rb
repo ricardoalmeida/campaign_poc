@@ -1,7 +1,8 @@
 require "spec_helper"
 
 RSpec.describe CampaignPoc::Services::DetectDiscrepancies do
-  let(:subject) { described_class }
+  let(:campaign_repo) { double(CampaignPoc::Repos::CampaignRepo) }
+
   before do
     repo = CampaignPoc::Repos::CampaignRepo.new
     repo.create(
