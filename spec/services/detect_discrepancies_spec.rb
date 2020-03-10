@@ -1,7 +1,9 @@
 require "spec_helper"
 
 RSpec.describe CampaignPoc::Services::DetectDiscrepancies do
-  let(:campaign_repo) { double(CampaignPoc::Repos::CampaignRepo) }
+  subject { described_class.new(ad_repo: ad_repo) }
+  let(:ad_repo) { double(CampaignPoc::Repos::AdRepo, all: ads_json) }
+  let(:ads_json) { json_fixture(:ads) }
 
   before do
     repo = CampaignPoc::Repos::CampaignRepo.new
@@ -13,7 +15,7 @@ RSpec.describe CampaignPoc::Services::DetectDiscrepancies do
     repo.create(
       ad_description: "Golang Developer",
       status: "active",
-      external_reference: "2"
+      external_reference: "4"
     )
   end
 
