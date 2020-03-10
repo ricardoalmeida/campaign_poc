@@ -12,6 +12,14 @@ RSpec.configure do |config|
   config.before do
     DatabaseCleaner.clean
   end
+
+  def fixture(name, format = "json")
+    File.read("spec/support/fixtures/#{name}.#{format}")
+  end
+
+  def json_fixture(name)
+    JSON.parse(fixture(name))
+  end
 end
 
 require_relative '../config/application'
