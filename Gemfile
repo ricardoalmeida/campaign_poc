@@ -6,6 +6,7 @@ gem 'dry-system'
 gem 'dry-auto_inject'
 gem 'rom'
 gem 'rom-sql'
+gem 'rom-http'
 gem 'pg'
 
 gem 'dotenv'

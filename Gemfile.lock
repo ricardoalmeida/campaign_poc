@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     coderay (1.1.2)
     concurrent-ruby (1.1.6)
     database_cleaner (1.8.3)
@@ -54,6 +56,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    public_suffix (4.0.3)
     rake (13.0.1)
     rom (5.2.2)
       rom-changeset (~> 5.2, >= 5.2.1)
@@ -73,6 +76,13 @@ GEM
       dry-struct (~> 1.0)
       dry-types (~> 1.0)
       transproc (~> 1.0, >= 1.1.0)
+    rom-http (0.8.0)
+      addressable (~> 2.6)
+      concurrent-ruby (~> 1.1)
+      dry-configurable (~> 0.6)
+      dry-core (~> 0.4)
+      dry-equalizer (~> 0.2)
+      rom-core (~> 5.0, >= 5.0.1)
     rom-repository (5.2.2)
       dry-core (~> 0.4)
       dry-initializer (~> 3.0, >= 3.0.1)
@@ -111,6 +121,7 @@ DEPENDENCIES
   pry
   rake
   rom
+  rom-http
   rom-sql
   rspec
 
