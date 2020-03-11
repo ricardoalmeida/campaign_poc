@@ -2,16 +2,16 @@
   {
     "reference": "1",
     "status": "enabled",
-    "description": "Description for campaign 11"
+    "description": "mock campaign 1"
   },
   {
     "reference": "2",
     "status": "disabled",
-    "description": "Description for campaign 12"
+    "description": "mock campaign 2"
   },
   {
     "reference": "3",
     "status": "enabled",
-    "description": "Description for campaign 13"
+    "description": "mock campaign 3"
   }
 ]

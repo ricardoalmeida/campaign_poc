@@ -16,7 +16,7 @@ module CampaignPoc
       end
 
       def query(conditions)
-        campaigns.where(conditions)
+        campaigns.where(conditions).to_a
       end
     end
   end
